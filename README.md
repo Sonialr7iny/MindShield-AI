@@ -1,6 +1,6 @@
 # 🛡️ MindShield AI: Detecting Manipulative Patterns in AI Conversations
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](ضع_رابط_تطبيقك_هنا_بعد_النشر)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://mindshield-ai.streamlit.app/)
 [![Powered by Gemini](https://img.shields.io/badge/Powered%20by-Google%20Gemini-4285F4?style=flat&logo=google)](https://ai.google.dev/)
 [![License](https://img.shields.io/badge/License-Research%20Prototype-red)](https://github.com/)
 
