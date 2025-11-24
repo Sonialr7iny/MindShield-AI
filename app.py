@@ -10,7 +10,6 @@ import os
 # ==========================================
 st.set_page_config(page_title="MindShield AI", page_icon="🛡️", layout="wide")
 
-
 try:
     api_key = st.secrets["GOOGLE_API_KEY"]
 except (FileNotFoundError, KeyError):
@@ -279,7 +278,7 @@ with tab2:
 # --- Sidebar Branding ---
 
 # st.sidebar.title("About")
-st.sidebar.markdown("     👨‍💻Developed by **Sonia Al-Ra'ini**")
+st.sidebar.markdown("Developed by **Sonia Al-Ra'ini**")
 st.sidebar.markdown("Ethical AI Safety • Cognitive Warfare Auditing")
 
 # --- Profile Links ---
