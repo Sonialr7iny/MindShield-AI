@@ -66,7 +66,7 @@ graph TD
     
     Finding1 & Finding2 --> Aggregator[Risk Aggregator]
     Aggregator --> Dashboard[🚨 User Dashboard]
-
+```
 ## Key Technical Features:
 - In-Context Learning: Agents are injected with expert knowledge bases (CBT & Cognitive Warfare definitions) via System Prompts.
 - Temporal Analysis: The system analyzes the history of the chat to detect Escalation (e.g., grooming behavior over time).
@@ -105,6 +105,7 @@ Bash
 
 ``
 pip install -r requirements.txt
+
 ``
 
 3. Set up API Key: 
