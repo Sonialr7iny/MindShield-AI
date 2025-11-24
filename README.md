@@ -93,32 +93,29 @@ We tested MindShield against three specific AI personas to validate accuracy:
 ## 🚀 How to Run Locally
 1. Clone the repository:
 
-``
+```
 git clone [https://github.com/YourUsername/MindShield-AI.git](https://github.com/YourUsername/MindShield-AI.git)
 
-``
+```
 
 2. Install dependencies:
 
-``
+```
 pip install -r requirements.txt
 
-``
+```
 
 3. Set up API Key: 
 Add your Google Gemini API key to .env or Streamlit secrets.
 
-``
-
+```
 export GOOGLE_API_KEY="your_key_here"
-
-``
+```
 4. Run the Application:
 
-``
+```
 streamlit run app.py
-
-``
+```
 
 ## 🔮 Future Roadmap: Project "Iwan"
 
