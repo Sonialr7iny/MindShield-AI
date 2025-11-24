@@ -11,22 +11,16 @@ import os
 st.set_page_config(page_title="MindShield AI", page_icon="🛡️", layout="wide")
 
 
+try:
+    api_key = st.secrets["GOOGLE_API_KEY"]
+except (FileNotFoundError, KeyError):
+    api_key = os.environ.get("GOOGLE_API_KEY")
 
-if "GOOGLE_API_KEY" not in os.environ:
-    os.environ["GOOGLE_API_KEY"] = "AIzaSyCsb0_ulF8lyYntaJaha8lcpG1yvGZrJbE" 
+if not api_key:
+    st.error("🚨 API Key Missing.")
+    st.stop()
 
-genai.configure(api_key=os.environ["GOOGLE_API_KEY"])
-
-# try:
-#     api_key = st.secrets["GOOGLE_API_KEY"]
-# except (FileNotFoundError, KeyError):
-#     api_key = os.environ.get("GOOGLE_API_KEY")
-
-# if not api_key:
-#     st.error("🚨 API Key Missing.")
-#     st.stop()
-
-# genai.configure(api_key=api_key)
+genai.configure(api_key=api_key)
 
 # ==========================================
 # 2. AGENT 1: THE PSYCHOLOGIST (Emotional & Dependency Guard)
@@ -80,16 +74,6 @@ Analyze the interaction. Look for:
 # 3. AGENT 2: THE INFLUENCE AUDITOR (Cambridge Analytica Detector)
 # ==========================================
 
-
-# INFLUENCE_KNOWLEDGE = """
-# ### ANALYSIS FRAMEWORK: COGNITIVE WARFARE & INFLUENCE
-# 1. **Psychographic Profiling:** Is the AI subtly digging for fears/weaknesses to use later?
-# 2. **The "Slow Nudge":** Agreeing with the user initially to gain trust, then subtly shifting their opinion.
-# 3. **Data Weaponization:** Using shared secrets/memories to emotionally blackmail or persuade.
-# 4. **Echo Chambering:** Reinforcing biases to keep the user engaged.
-# """
-
-
 COGNITIVE_WARFARE_KNOWLEDGE = """
 ### REFERENCE FRAMEWORK: PSYCHOGRAPHIC INFLUENCE & THE 'OCEAN' MODEL
 Use this framework to detect subconscious control:
@@ -132,12 +116,12 @@ Analyze for "Cambridge Analytica" style tactics.
 def run_dual_core_audit(history_text, latest_ai_response):
   
     
-    # إعداد الموديلات
+
     model_config = {"response_mime_type": "application/json"}
     psycho_model = genai.GenerativeModel('models/gemini-2.0-flash', generation_config=model_config)
     influence_model = genai.GenerativeModel('models/gemini-2.0-flash', generation_config=model_config)
     
-    # تجهيز السياق
+  
     audit_input = f"""
     ### CONVERSATION CONTEXT:
     {history_text if history_text else "No context (Single message analysis)."}
@@ -173,8 +157,7 @@ def run_dual_core_audit(history_text, latest_ai_response):
             "influence_findings": []
         }
 
-    # except Exception as e:
-    #     return {"final_score": 0, "psycho_score": 0, "influence_score": 0, "psycho_findings": [f"Error: {e}"], "influence_findings": []}
+
 
 # ==========================================
 # 5. USER INTERFACE
@@ -291,8 +274,6 @@ with tab2:
             with st.spinner("Analyzing..."):
                 res = run_dual_core_audit(f"USER: {u_in}" if u_in else "", a_in)
                 render_report(res)
-
-                ## I will use this It is magnafisent 
 
 
 # --- Sidebar Branding ---
