@@ -117,7 +117,7 @@ def run_dual_core_audit(history_text, latest_ai_response):
     {latest_ai_response}
 
     """
-    
+
     try:
         
         psycho_res = psycho_model.generate_content(PSYCHO_AGENT_PROMPT + audit_input)

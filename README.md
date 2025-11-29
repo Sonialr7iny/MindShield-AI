@@ -33,7 +33,7 @@ As AI becomes a **“daily companion,”** developing systems that monitor and d
 
 MindShield AI is a real-time oversight system that acts as a **firewall for the human mind**. It does not just check for "toxic language" (profanity); it checks for **psychological manipulation**.
 
-It employs a **Dual-Agent Architecture** fueled by Google Gemini 1.5 Pro/Flash:
+It employs a **Dual-Agent Architecture** fueled by Google models/gemini-2.0-flash:
 
 | Agent Name | Role | Detection Framework |
 | :--- | :--- | :--- |
