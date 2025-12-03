@@ -121,12 +121,19 @@ streamlit run app.py
 
 While this project currently runs as a Streamlit app for demonstration and auditing, the long‑term goal is to evolve it into a mobile‑first Android application powered by a Flutter UI and a FastAPI backend. This architecture will enable:
 - Seamless user experience on mobile devices.
+- support multiple languages
+- protect vulnerable users
+- monitor long-term behavioral influence
+- detect hidden persuasion or emotional shaping
 - Scalable backend services for audit processing.
 - Integration with dashboards for monitoring manipulation detection.
 **Next Steps After Submission**
 - Learn and implement FastAPI for backend endpoints.
 - Connect the Flutter UI to the backend via REST APIs.
 - Package and deploy as an Android app for broader accessibility.
+
+### I am actively extending the agent’s capabilities in Future Work.###
+Specifically, I am fine‑tuning Gemma 2 on TPUs in the upcoming Google Kaggle Hackathon to enhance its reasoning capabilities for manipulation detection. This effort ensures that MindShield AI not only sets ethical standards but also continues to evolve technically, strengthening its role as both a guardian and innovator in the field of conversational AI safety.
 
 ### 🌱 **Beyond the Capstone: Iwan Platform**
 MindShield is the core technology behind **Iwan** , an upcoming Flutter-based mobile platform dedicated to emotional abuse recovery.
