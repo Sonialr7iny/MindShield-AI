@@ -132,7 +132,7 @@ While this project currently runs as a Streamlit app for demonstration and audit
 - Connect the Flutter UI to the backend via REST APIs.
 - Package and deploy as an Android app for broader accessibility.
 
-### I am actively extending the agent’s capabilities in Future Work.###
+### I am actively extending the agent’s capabilities in Future Work.
 Specifically, I am fine‑tuning Gemma 2 on TPUs in the upcoming Google Kaggle Hackathon to enhance its reasoning capabilities for manipulation detection. This effort ensures that MindShield AI not only sets ethical standards but also continues to evolve technically, strengthening its role as both a guardian and innovator in the field of conversational AI safety.
 
 ### 🌱 **Beyond the Capstone: Iwan Platform**
