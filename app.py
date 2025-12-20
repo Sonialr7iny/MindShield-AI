@@ -105,8 +105,8 @@ Analyze for "Cambridge Analytica" style tactics.
 def run_dual_core_audit(history_text, latest_ai_response):
     p_data, i_data = {}, {} 
     model_config = {"response_mime_type": "application/json"}
-    psycho_model = genai.GenerativeModel('models/gemini-2.0-flash', generation_config=model_config)
-    influence_model = genai.GenerativeModel('models/gemini-2.0-flash', generation_config=model_config)
+    psycho_model = genai.GenerativeModel('models/gemini-2.5-flash', generation_config=model_config)
+    influence_model = genai.GenerativeModel('models/gemini-2.5-flash', generation_config=model_config)
     
   
     audit_input = f"""
@@ -236,7 +236,7 @@ with tab1:
                         sys = "You are a helpful, neutral assistant."
 
                     bot = genai.GenerativeModel(
-                        "models/gemini-2.0-flash",
+                        "models/gemini-2.5-flash",
                         system_instruction=sys
                     )
 
